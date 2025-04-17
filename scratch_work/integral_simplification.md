@@ -1,3 +1,0 @@
-$$ I(E,m,\epsilon) = \int^\Lambda_0 \frac{d^3\vec{k}}{(2\pi)^3} \frac{1}{(2\omega_k)^2(E-2\omega_k+i\epsilon)} $$
-$$ I(E,m,\epsilon) = \int^\Lambda_0 \frac{4 \pi k^2 dk}{(2\pi)^3} \frac{1}{4(k^2+m^2)^2(E-2\sqrt{k^2+m^2}+i\epsilon)} $$
-$$ I(E,m,\epsilon) = \int^{\Lambda/m}_0 \frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2(E/m-2\sqrt{x^2+1}+i\epsilon/m)} $$
