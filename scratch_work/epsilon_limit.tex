@@ -1,0 +1,8 @@
+\begin{align}
+    \lim_{\epsilon \to 0} \int^{\Lambda/m}_0 \frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2}\frac{1}{(E/m-2\sqrt{x^2+1}+i\epsilon/m)}\,,\\
+    \text{using the identity: } \lim_{\epsilon \to 0^+} \frac{1}{x+i\epsilon} = P(\frac{1}{x}) - i\pi\delta(x)\\
+     \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})(P\frac{1}{E/m-2\sqrt{x^2+1}} - i\pi\delta(E/m-2\sqrt{x^2+1}))\,,\\
+    \text{using the identity: } \delta(g(x)) = \sum_{i} \frac{\delta(x-x_i)}{|g'(x_i)|} \text{where $x_i$ are the roots of g(x)}\\
+     \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})P(\frac{1}{E/m-2\sqrt{x^2+1}}) -  \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})i\pi(\frac{\delta(x-\sqrt{E/m - 1})}{-\sqrt{1-m/E}}+\frac{\delta(x-i\sqrt{E/m + 1})}{-\sqrt{1+m/E}})\\
+     \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})P(\frac{1}{E/m-2\sqrt{x^2+1}}) -\\i\pi(\frac{\pi (\sqrt{E/m - 1})^2}{(2\pi)^3((\sqrt{E/m - 1})^2+1)^2}\frac{1}{-\sqrt{1-m/E}}+\frac{\pi (i\sqrt{E/m + 1})^2}{(2\pi)^3((i\sqrt{E/m + 1})^2+1)^2}\frac{1}{-\sqrt{1+m/E}})\\ 
+\end{align}
