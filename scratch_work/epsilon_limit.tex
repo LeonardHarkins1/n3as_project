@@ -1,17 +1,7 @@
-\begin{align}
-    \lim_{\epsilon \to 0} \int^{\Lambda/m}_0 \frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2}\frac{1}{(E/m-2\sqrt{x^2+1}+i\epsilon/m)}\,,\\
-    \text{using the identity: } \lim_{\epsilon \to 0^+} \frac{1}{x+i\epsilon} = P(\frac{1}{x}) - i\pi\delta(x)\\
-     \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})(P\frac{1}{E/m-2\sqrt{x^2+1}} - i\pi\delta(E/m-2\sqrt{x^2+1}))\,,\\
-    \text{using the identity: } \delta(g(x)) = \sum_{i} \frac{\delta(x-x_i)}{|g'(x_i)|} \text{where $x_i$ are the roots of g(x)}\\
-     \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})P(\frac{1}{E/m-2\sqrt{x^2+1}}) -  \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})i\pi(\frac{\delta(x-\sqrt{E/m - 1})}{-\sqrt{1-m/E}}+\frac{\delta(x-i\sqrt{E/m + 1})}{-\sqrt{1+m/E}})\\
-     \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})P(\frac{1}{E/m-2\sqrt{x^2+1}}) -\\i\pi(\frac{\pi (\sqrt{E/m - 1})^2}{(2\pi)^3((\sqrt{E/m - 1})^2+1)^2}\frac{1}{-\sqrt{1-m/E}}+\frac{\pi (i\sqrt{E/m + 1})^2}{(2\pi)^3((i\sqrt{E/m + 1})^2+1)^2}\frac{1}{-\sqrt{1+m/E}})\\ 
-\end{align}
-
-
 \begin{equation}
     \lim_{\epsilon \to 0} \int^{\Lambda/m}_0 \frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2}\frac{1}{(E/m-2\sqrt{x^2+1}+i\epsilon/m)}\,,
 \end{equation}
-{using the identity:
+using the identity:
 \begin{align}    
 \lim_{\epsilon \to 0^+} \frac{1}{x+i\epsilon} &= P(\frac{1}{x}) - i\pi\delta(x)\\
      &\int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})
@@ -21,9 +11,19 @@ using the identity:
 \begin{equation}
 \delta(g(x)) = \sum_{i} \frac{\delta(x-x_i)}{|g'(x_i)|}
 \end{equation}
-where $x_i$ are the roots of $g(x)$
+where $x_i$ are the roots of $g(x)$. The roots are found as follows, keeping in mind that $x_i$ must be real as we are integrating only over real values of x: 
 \begin{align}
-     \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})P(\frac{1}{E/m-2\sqrt{x^2+1}}) -  \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})i\pi(\frac{\delta(x-\sqrt{E/m - 1})}{-\sqrt{1-m/E}}+\frac{\delta(x-i\sqrt{E/m + 1})}{-\sqrt{1+m/E}})\\
-     \int^{\Lambda/m}_0 (\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2})P(\frac{1}{E/m-2\sqrt{x^2+1}}) -
-     \\i\pi(\frac{\pi (\sqrt{E/m - 1})^2}{(2\pi)^3((\sqrt{E/m - 1})^2+1)^2}\frac{1}{-\sqrt{1-m/E}}+\frac{\pi (i\sqrt{E/m + 1})^2}{(2\pi)^3((i\sqrt{E/m + 1})^2+1)^2}\frac{1}{-\sqrt{1+m/E}})
+g(x) = E/m-2\sqrt{x^2+1}\\
+E/m-2\sqrt{x_i^2+1} = 0, E/m \ge 2\\
+x_i = \pm\frac{1}{2}\sqrt{\left(\frac{E}{m}\right)^2-4}, E/m \ge 2\\
+|g'(x)| = \frac{2x}{\sqrt{x^2+1}}\\
+|g'(x_i)| = \frac{2m\sqrt{\left(\frac{E}{m}\right)^2-4}}{E}, E/m \ge 2\\
+\delta(E/m - 2\sqrt{x^2+1}) = \frac{E}{2m\sqrt{\left(\frac{E}{m}\right)^2-4}}(\delta(x-\frac{1}{2}\sqrt{(E/m)^2 - 4}) + \delta(x+\frac{1}{2}\sqrt{(E/m)^2 - 4}))\Theta(E/m-2)
+\end{align}
+We keep only the first delta function which has a nonzero integral over $[0,\Lambda/m]$ and multiply by the Heaviside step function to enforce $E/m \ge 2$ which results from x being real. Plugging back into the integral we arrive at an analytic solution to the imaginary component.
+\begin{align}
+     \int^{\Lambda/m}_0 P(\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2}\frac{1}{E/m-2\sqrt{x^2+1}}) -  \int^{\Lambda/m}_0 \frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2}\frac{i\pi E\delta(x-\frac{1}{2}\sqrt{(E/m)^2 - 4})}{2m\sqrt{(E/m)^2 - 4}})\Theta(E/m-2)
+\end{align}
+\begin{align}
+     \int^{\Lambda/m}_0 P(\frac{\pi x^2 dx}{(2\pi)^3(x^2+1)^2}\frac{1}{E/m-2\sqrt{x^2+1}}) - \frac{i\pi^2}{(2\pi)^3}\frac{\sqrt{(E/m)^2-4}}{2(E/m)^2}\Theta(E/m-2)
 \end{align}
