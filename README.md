@@ -21,3 +21,18 @@ Notes: This integral diverges as $\Lambda\to \infty$.
 * Add another row of plots where you remove the "real" part of the square root from the real part of the integral to check if the cusp dissapears.
 * Read more of last the paper I sent: RevModPhys.90.025001.pdf 
 
+
+## Task 2
+Play around with the integral
+
+$$
+I(E_f,E_i,q_0,m)=
+\int \frac{ dk_0 d^3\vec{k} }{(2\pi)^4}
+\left[\frac{1}{(E_f-k_0)^2-\omega_k^2+i\epsilon}\right]
+\left[\frac{1}{(q_0+E_f-k_0)^2-\omega_k^2+i\epsilon}\right]
+\left[\frac{1}{(E_i-k_0)^2-\omega_k^2+i\epsilon}\right]
+\left[\frac{1}{k_0^2-\omega_k^2+i\epsilon}\right]
+$$
+
+Note that in the previous case you had only $E$ as an independent variable, in this case you have $E_f$, $E_i$ and $q_0$.
+However, in this case the integral converges, and there is no need to introduce an artificial $\Lambda$ cut off for the integration region.
