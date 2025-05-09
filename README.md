@@ -36,3 +36,9 @@ $$
 
 Note that in the previous case you had only $E$ as an independent variable, in this case you have $E_f$, $E_i$ and $q_0$.
 However, in this case the integral converges, and there is no need to introduce an artificial $\Lambda$ cut off for the integration region.
+
+### Follow up from May 9
+* You can perform the contour integral following the procedure in the notes sent on the email today, you should get 4 terms.
+* Check which of these terms appear to have poles where the $\delta$, in the $\frac{1}{x-i\epsilon}=PV\frac{1}{x} + i\pi\delta(x)$, will be relevant.
+* Probably some plots to illustrate the point above would be a good idea.
+
