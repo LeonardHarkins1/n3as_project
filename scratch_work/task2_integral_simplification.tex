@@ -1,0 +1,256 @@
+to evaluate the contour integral over $k_0$ with the residue theorem, we need all the poles enclosed in the contour. $\int d k_0 = 2 \pi i \sum (\text{residues})$
+\begin{align}
+(E_f - k_0)^2 - \omega_k^2 + i\epsilon = 0\\
+\text{poles 1 and 2: } k_0 = E_f \pm (\omega_k -i \epsilon)\\
+(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon = 0\\
+\text{poles 3 and 4: } k_0 = q_0 E_f \pm (\omega_k -i \epsilon)\\
+(E_i - k_0)^2 - \omega_k^2 + i\epsilon = 0\\
+\text{poles 5 and 6: } k_0 = E_i \pm (\omega_k -i \epsilon)\\
+(k_0)^2 - \omega_k^2 + i\epsilon = 0\\
+\text{poles 7 and 8: }k_0 =\pm (\omega_k -i \epsilon)
+\end{align}
+We only keep the poles with $-i \epsilon$ for the residues: $Res(f, c) = \lim_{x\to c} (x-c) f$, where c is a pole.
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\left[
+\lim_{k_0 \to E_f + \omega_k - i \epsilon} (k_0 - E_f - \omega_k + i \epsilon)
++ \lim_{k_0 \to q_0 + E_f + \omega_k - i \epsilon} (k_0 - q_0 - E_f - \omega_k + i \epsilon) \right. \\
+&\quad + \lim_{k_0 \to E_i + \omega_k - i \epsilon} (k_0 - E_i - \omega_k + i \epsilon)
++ \left. \lim_{k_0 \to \omega_k - i \epsilon} (k_0 - \omega_k + i \epsilon) \right] \\
+&\quad \times \int \frac{d^3 \vec{k}}{(2\pi)^4}
+\frac{1}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+}\,.
+\end{align*}
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{(k_0 - E_f - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to q_0 + E_f + \omega_k - i \epsilon}\frac{(k_0 - q_0 - E_f - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to E_i + \omega_k - i \epsilon}\frac{(k_0 - E_i - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to \omega_k - i \epsilon}\frac{(k_0 - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \bigg)
+\end{align*}
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{(k_0 - E_f - \omega_k + i \epsilon)}{
+\left[(k_0 -E_f)^2 - (\sqrt{\omega_k^2 - i\epsilon})^2\right] %
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to q_0 + E_f + \omega_k - i \epsilon}\frac{(k_0 - q_0 - E_f - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(k_0 -q_0 - E_f)^2 - (\sqrt{\omega_k^2 - i\epsilon})^2\right]%
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to E_i + \omega_k - i \epsilon}\frac{(k_0 - E_i - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(k_0 - E_i)^2 - (\sqrt{\omega_k^2 - i\epsilon})^2\right]%
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to \omega_k - i \epsilon}\frac{(k_0 - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - (\sqrt{\omega_k^2 - i\epsilon})^2\right]%
+} \bigg)
+\end{align*}
+using the first order Taylor expansion for small $\epsilon$:$\sqrt{\omega_k^2 - i \epsilon} = \omega_k - i \epsilon$
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{(k_0 - E_f - \omega_k + i \epsilon)}{
+\left[(k_0 -E_f)^2 - (\omega_k - i \epsilon)^2\right] %
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to q_0 + E_f + \omega_k - i \epsilon}\frac{(k_0 - q_0 - E_f - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(k_0 -q_0 - E_f)^2 - (\omega_k - i \epsilon)^2\right]%
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to E_i + \omega_k - i \epsilon}\frac{(k_0 - E_i - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(k_0 - E_i)^2 - (\omega_k - i \epsilon)^2\right]%
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to \omega_k - i \epsilon}\frac{(k_0 - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - (\omega_k - i \epsilon)^2\right]%
+} \bigg)
+\end{align*}
+Using difference of squares (bad alignment - fix later):
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{(k_0 - E_f - \omega_k + i \epsilon)}{
+\left[k_0 -E_f - \omega_k + i \epsilon\right] %
+\left[k_0 -E_f + \omega_k - i \epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to q_0 + E_f + \omega_k - i \epsilon}\frac{(k_0 - q_0 - E_f - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 -q_0 - E_f - \omega_k + i \epsilon\right]%
+\left[k_0 -q_0 - E_f + \omega_k - i \epsilon\right]%
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to E_i + \omega_k - i \epsilon}\frac{(k_0 - E_i - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 - E_i - \omega_k + i \epsilon\right]%
+\left[k_0 - E_i + \omega_k - i \epsilon\right]%
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to \omega_k - i \epsilon}\frac{(k_0 - \omega_k + i \epsilon)}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 - \omega_k + i \epsilon\right]%
+\left[k_0 + \omega_k - i \epsilon\right]%
+} \bigg)
+\end{align*}
+And then canceling numerators: 
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{1}{
+\left[k_0 -E_f + \omega_k - i \epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to q_0 + E_f + \omega_k - i \epsilon}\frac{1}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 -q_0 - E_f + \omega_k - i \epsilon\right]%
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to E_i + \omega_k - i \epsilon}\frac{1}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 - E_i + \omega_k - i \epsilon\right]%
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to \omega_k - i \epsilon}\frac{1}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 + \omega_k - i \epsilon\right]%
+} \bigg)
+\end{align*}
+And finally evaluating the limit by plugging in $k_0$:
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{1}{
+\left[k_0 -E_f + \omega_k - i \epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to q_0 + E_f + \omega_k - i \epsilon}\frac{1}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 -q_0 - E_f + \omega_k - i \epsilon\right]%
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to E_i + \omega_k - i \epsilon}\frac{1}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 - E_i + \omega_k - i \epsilon\right]%
+\left[k_0^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \lim_{k_0 \to \omega_k - i \epsilon}\frac{1}{
+\left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - k_0)^2 - \omega_k^2 + i\epsilon\right]
+\left[k_0 + \omega_k - i \epsilon\right]%
+} \bigg)
+\end{align*}
+Now we can directly evaluate all the limits.
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\bigg(\quad\frac{1}{
+\left[2\omega_k - 2i \epsilon\right]
+\left[(q_0 - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_f + \omega_k - i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[( - q_0  - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[2\omega_k - 2i \epsilon\right]%
+\left[(E_i + -q_0 + -E_f + -\omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f + \omega_k - i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - (E_i + \omega_k - i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - E_i - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[2\omega_k - 2i \epsilon\right]%
+\left[(E_i + \omega_k - i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - \omega_k + i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - \omega_k + i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
+\left[2\omega_k - 2i \epsilon\right]%
+} \bigg)
+\end{align*}
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4}\frac{1}{\left[2\omega_k - 2i \epsilon\right]} \times\\
+&\bigg(\quad\frac{1}{
+\left[(q_0 - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_f + \omega_k - i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[( - q_0  - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i + -q_0 + -E_f + -\omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f + \omega_k - i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - (E_i + \omega_k - i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - E_i - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i + \omega_k - i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - \omega_k + i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - \omega_k + i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
+} \bigg)
+\end{align*}
