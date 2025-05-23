@@ -225,14 +225,14 @@ Now we can directly evaluate all the limits.
 } \\
 &\quad + \frac{1}{
 \left[(E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
-\left[(q_0 + E_f - \omega_k + i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
-\left[(E_i - \omega_k + i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
 \left[2\omega_k - 2i \epsilon\right]%
 } \bigg)
 \end{align*}
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4}\frac{1}{\left[2\omega_k - 2i \epsilon\right]} \times\\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4}\frac{1}{2\left[\omega_k - i \epsilon\right]} \times\\
 &\bigg(\quad\frac{1}{
 \left[(q_0 - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
 \left[(E_i - E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
@@ -250,7 +250,57 @@ Now we can directly evaluate all the limits.
 } \\
 &\quad + \frac{1}{
 \left[(E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
-\left[(q_0 + E_f - \omega_k + i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
-\left[(E_i - \omega_k + i \epsilon))^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
+} \bigg)
+\end{align*}
+Remove $\epsilon^2$ terms and group $i\epsilon$ terms
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{d^3 \vec{k}}{(2\pi)^4}\frac{1}{2\left[\omega_k - i \epsilon\right]} \times\\
+&\bigg(\quad\frac{1}{
+\left[(q_0 - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - E_f - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_f + \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[( q_0  + \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i + -q_0  -E_f  -\omega_k )^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f + \omega_k )^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - E_i - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - E_i - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i + \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+\left[(q_0 + E_f - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+\left[(E_i - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
+} \bigg)
+\end{align*}
+Expand squares, cancel $\omega_k^2$ terms, rewrite $\frac{d^3 \vec{k}}{(2\pi)^4}$ as $\frac{2 k^2 d k}{(2\pi)^3}$
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+&\int \frac{k^2 d k}{(2\pi)^3}\frac{1}{\left[\omega_k - i \epsilon\right]} \times\\
+&\bigg(\quad\frac{1}{
+\left[q_0^2 - 2 q_0\omega_k + i\epsilon\right]
+\left[(E_i - E_f)^2 - 2(E_i - E_f)\omega_k + i\epsilon\right]
+\left[E_f^2 + 2 E_f\omega_k + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[q_0^2  + 2 q_0\omega_k + i\epsilon\right]
+\left[(E_i + -q_0  -E_f)^2  -2(E_i + -q_0  -E_f)\omega_k + i\epsilon\right]
+\left[(q_0 + E_f)^2 + 2(q_0 + E_f)\omega_k + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - E_i)^2 - 2(E_f - E_i)\omega_k + i\epsilon\right]
+\left[(q_0 + E_f - E_i)^2 - 2(q_0 + E_f - E_i)\omega_k + i\epsilon\right]
+\left[E_i^2 + 2 E_i\omega_k + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[E_f^2 - 2 E_f\omega_k + i\epsilon\right]
+\left[(q_0 + E_f)^2 - 2(q_0 + E_f)\omega_k + i\epsilon\right]
+\left[E_i^2 - 2 E_i\omega_k + i\epsilon\right]
 } \bigg)
 \end{align*}
