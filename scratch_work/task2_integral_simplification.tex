@@ -1,9 +1,10 @@
-to evaluate the contour integral over $k_0$ with the residue theorem, we need all the poles enclosed in the contour. $\int d k_0 = 2 \pi i \sum (\text{residues})$
+ evaluate the contour integral over $k_0$ with the residue theorem, we need all the poles enclosed in the contour. $\int d k_0 = 2 \pi i \sum (\text{residues})$
+{\bfseries minus sign for ccw integral, and $2\pi i$}
 \begin{align}
 (E_f - k_0)^2 - \omega_k^2 + i\epsilon = 0\\
 \text{poles 1 and 2: } k_0 = E_f \pm (\omega_k -i \epsilon)\\
 (q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon = 0\\
-\text{poles 3 and 4: } k_0 = q_0 E_f \pm (\omega_k -i \epsilon)\\
+\text{poles 3 and 4: } k_0 = q_0 + E_f \pm (\omega_k -i \epsilon)\\
 (E_i - k_0)^2 - \omega_k^2 + i\epsilon = 0\\
 \text{poles 5 and 6: } k_0 = E_i \pm (\omega_k -i \epsilon)\\
 (k_0)^2 - \omega_k^2 + i\epsilon = 0\\
@@ -17,7 +18,7 @@ We only keep the poles with $-i \epsilon$ for the residues: $Res(f, c) = \lim_{x
 + \lim_{k_0 \to q_0 + E_f + \omega_k - i \epsilon} (k_0 - q_0 - E_f - \omega_k + i \epsilon) \right. \\
 &\quad + \lim_{k_0 \to E_i + \omega_k - i \epsilon} (k_0 - E_i - \omega_k + i \epsilon)
 + \left. \lim_{k_0 \to \omega_k - i \epsilon} (k_0 - \omega_k + i \epsilon) \right] \\
-&\quad \times \int \frac{d^3 \vec{k}}{(2\pi)^4}
+&\quad \times \int \frac{-i d^3 \vec{k}}{(2\pi)^3}
 \frac{1}{
 \left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
 \left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
@@ -27,7 +28,7 @@ We only keep the poles with $-i \epsilon$ for the residues: $Res(f, c) = \lim_{x
 \end{align*}
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3} \times\\
 &\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{(k_0 - E_f - \omega_k + i \epsilon)}{
 \left[(E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
 \left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
@@ -55,7 +56,7 @@ We only keep the poles with $-i \epsilon$ for the residues: $Res(f, c) = \lim_{x
 \end{align*}
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3} \times\\
 &\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{(k_0 - E_f - \omega_k + i \epsilon)}{
 \left[(k_0 -E_f)^2 - (\sqrt{\omega_k^2 - i\epsilon})^2\right] %
 \left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
@@ -84,7 +85,7 @@ We only keep the poles with $-i \epsilon$ for the residues: $Res(f, c) = \lim_{x
 using the first order Taylor expansion for small $\epsilon$:$\sqrt{\omega_k^2 - i \epsilon} = \omega_k - i \epsilon$
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3} \times\\
 &\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{(k_0 - E_f - \omega_k + i \epsilon)}{
 \left[(k_0 -E_f)^2 - (\omega_k - i \epsilon)^2\right] %
 \left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
@@ -113,7 +114,7 @@ using the first order Taylor expansion for small $\epsilon$:$\sqrt{\omega_k^2 - 
 Using difference of squares (bad alignment - fix later):
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3} \times\\
 &\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{(k_0 - E_f - \omega_k + i \epsilon)}{
 \left[k_0 -E_f - \omega_k + i \epsilon\right] %
 \left[k_0 -E_f + \omega_k - i \epsilon\right]
@@ -146,7 +147,7 @@ Using difference of squares (bad alignment - fix later):
 And then canceling numerators: 
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3} \times\\
 &\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{1}{
 \left[k_0 -E_f + \omega_k - i \epsilon\right]
 \left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
@@ -175,7 +176,7 @@ And then canceling numerators:
 And finally evaluating the limit by plugging in $k_0$:
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3} \times\\
 &\bigg(\lim_{k_0 \to E_f + \omega_k - i \epsilon}\quad\frac{1}{
 \left[k_0 -E_f + \omega_k - i \epsilon\right]
 \left[(q_0 + E_f - k_0)^2 - \omega_k^2 + i\epsilon\right]
@@ -204,7 +205,7 @@ And finally evaluating the limit by plugging in $k_0$:
 Now we can directly evaluate all the limits.
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3} \times\\
 &\bigg(\quad\frac{1}{
 \left[2\omega_k - 2i \epsilon\right]
 \left[(q_0 - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
@@ -232,7 +233,7 @@ Now we can directly evaluate all the limits.
 \end{align*}
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4}\frac{1}{2\left[\omega_k - i \epsilon\right]} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3}\frac{1}{2\left[\omega_k - i \epsilon\right]} \times\\
 &\bigg(\quad\frac{1}{
 \left[(q_0 - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
 \left[(E_i - E_f - \omega_k + i \epsilon)^2 - \omega_k^2 + i\epsilon\right]
@@ -257,7 +258,7 @@ Now we can directly evaluate all the limits.
 Remove $\epsilon^2$ terms and group $i\epsilon$ terms
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{d^3 \vec{k}}{(2\pi)^4}\frac{1}{2\left[\omega_k - i \epsilon\right]} \times\\
+&\int \frac{-i d^3 \vec{k}}{(2\pi)^3}\frac{1}{2\left[\omega_k - i \epsilon\right]} \times\\
 &\bigg(\quad\frac{1}{
 \left[(q_0 - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
 \left[(E_i - E_f - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
@@ -279,10 +280,10 @@ Remove $\epsilon^2$ terms and group $i\epsilon$ terms
 \left[(E_i - \omega_k)^2 - \omega_k^2 + i\epsilon\right]
 } \bigg)
 \end{align*}
-Expand squares, cancel $\omega_k^2$ terms, rewrite $\frac{d^3 \vec{k}}{(2\pi)^4}$ as $\frac{2 k^2 d k}{(2\pi)^3}$
+Expand squares, cancel $\omega_k^2$ terms, rewrite $\frac{d^3 \vec{k}}{(2\pi)^3}$ as $\frac{2 k^2 d k}{(2\pi)^2}$
 \begin{align*}
 &I(E_f, E_i, q_0, m) = \\
-&\int \frac{k^2 d k}{(2\pi)^3}\frac{1}{\left[\omega_k - i \epsilon\right]} \times\\
+&\int \frac{-i k^2 d k}{(2\pi)^2}\frac{1}{\left[\omega_k - i \epsilon\right]} \times\\
 &\bigg(\quad\frac{1}{
 \left[q_0^2 - 2 q_0\omega_k + i\epsilon\right]
 \left[(E_i - E_f)^2 - 2(E_i - E_f)\omega_k + i\epsilon\right]

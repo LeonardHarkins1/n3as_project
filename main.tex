@@ -7,7 +7,7 @@
 \usepackage{amsthm} % Math packages
 \usepackage{physics} % Physics packages
 \usepackage{graphicx} 
-
+\usepackage{pdflscape} %adds landscape mode
 \usepackage[hmarginratio=1:1,top=32mm,columnsep=20pt,right=1in,left=1in]{geometry} % Document margins
 
 \usepackage{titlesec} % Allows customization of titles
@@ -75,7 +75,7 @@ Analytically taking the limit as $\epsilon \to 0$:
 %Don't leave a line between subfloats if they should appear on the same line.
 \caption{\label{fig:2}Caption2.}
 \end{figure}
-
+    
 \section{Task 2}
 
 In this second task you will be looking at the value of the integral
@@ -83,8 +83,52 @@ In this second task you will be looking at the value of the integral
 
 Integral simplification: 
 \input{scratch_work/task2_integral_simplification}
+Plots of Integral (numerically integrated): 
+\begin{figure}[htbp!]
+\hfil
+\subfloat[\label{fig:2.1}Caption2.1.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ef_Ei1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ei_Ef1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_q0_Ef1_Ei1_epsilon_0.1.pdf}}
+\hfil
+%Don't leave a line between subfloats if they should appear on the same line.
+\caption{\label{fig:2}Caption2.}
+\end{figure}
 
+\input{scratch_work/task2_epsilon_limit}
+
+\begin{figure}[htbp!]
+\hfil
+\subfloat[\label{fig:2.1}Caption2.1.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ef_Ei1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ei_Ef1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_q0_Ef1_Ei1_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.1}Caption2.1.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ef_Ei1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ei_Ef1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_q0_Ef1_Ei1_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.1}Caption2.1.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ef_Ei1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ei_Ef1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_q0_Ef1_Ei1_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.1}Caption2.1.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ef_Ei1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_Ei_Ef1_q01_epsilon_0.1.pdf}}
+\hfil
+\subfloat[\label{fig:2.2}Caption2.2.]{\includegraphics[width=0.5\linewidth]{task2_plots/ReI_vs_q0_Ef1_Ei1_epsilon_0.1.pdf}}
+\hfil
+%Don't leave a line between subfloats if they should appear on the same line.
+\caption{\label{fig:2}Caption2.}
+\end{figure}
 \section{Literature review}
 \input{reading_notes/Scattering_and_resonances_from_lattice_QCD_notes.tex}
+\input{reading_notes/Transitions_to_Two_Hadron_States_From_QCD_notes.tex}
 
 \end{document}

@@ -1,0 +1,118 @@
+Now to take the limit as $\epsilon \to 0$ using the Sokhotski-Plemelj theorem: $\lim_{\epsilon \to 0^+} \frac{1}{x+i\epsilon} = P(\frac{1}{x}) - i\pi\delta(x)$:
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+\lim_{\epsilon \to 0}&\int \frac{-i k^2 d k}{(2\pi)^2}\frac{1}{\left[\omega_k - i \epsilon\right]} \times\\
+&\bigg(\quad\frac{1}{
+\left[q_0^2 - 2 q_0\omega_k + i\epsilon\right]
+\left[(E_i - E_f)^2 - 2(E_i - E_f)\omega_k + i\epsilon\right]
+\left[E_f^2 + 2 E_f\omega_k + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[q_0^2  + 2 q_0\omega_k + i\epsilon\right]
+\left[(E_i + -q_0  -E_f)^2  -2(E_i + -q_0  -E_f)\omega_k + i\epsilon\right]
+\left[(q_0 + E_f)^2 + 2(q_0 + E_f)\omega_k + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - E_i)^2 - 2(E_f - E_i)\omega_k + i\epsilon\right]
+\left[(q_0 + E_f - E_i)^2 - 2(q_0 + E_f - E_i)\omega_k + i\epsilon\right]
+\left[E_i^2 + 2 E_i\omega_k + i\epsilon\right]
+} \\
+&\quad + \frac{1}{
+\left[E_f^2 - 2 E_f\omega_k + i\epsilon\right]
+\left[(q_0 + E_f)^2 - 2(q_0 + E_f)\omega_k + i\epsilon\right]
+\left[E_i^2 - 2 E_i\omega_k + i\epsilon\right]
+} \bigg)
+\end{align*}
+To evaluate this limit, we should note that the identity only matters if x is within the region of integration. That is, x has at least one positive root. Since $E_i$, $E_f$, and $q_0$ are positive and nonzero, we can see which of the factors result in a delta function of an argument with a positive root. \textbf{attach graphs that show roots}
+\begin{align*}
+&I(E_f, E_i, q_0, m) = \\
+\lim_{\epsilon \to 0}&\int \frac{-i k^2 d k}{(2\pi)^2}\frac{1}{\left[\omega_k\right]} \times\\
+&\bigg(\quad\frac{1}{
+\left[q_0^2 - 2 q_0\omega_k + i\epsilon\right]
+\left[(E_i - E_f)^2 - 2(E_i - E_f)\omega_k + i\epsilon\right]
+\left[E_f^2 + 2 E_f\omega_k\right]
+} \\
+&\quad + \frac{1}{
+\left[q_0^2  + 2 q_0\omega_k\right]
+\left[(E_i + -q_0  -E_f)^2  -2(E_i + -q_0  -E_f)\omega_k + i\epsilon\right]
+\left[(q_0 + E_f)^2 + 2(q_0 + E_f)\omega_k\right]
+} \\
+&\quad + \frac{1}{
+\left[(E_f - E_i)^2 - 2(E_f - E_i)\omega_k\right]
+\left[(q_0 + E_f - E_i)^2 - 2(q_0 + E_f - E_i)\omega_k + i\epsilon\right]
+\left[E_i^2 + 2 E_i\omega_k\right]
+} \\
+&\quad + \frac{1}{
+\left[E_f^2 - 2 E_f\omega_k + i\epsilon\right]
+\left[(q_0 + E_f)^2 - 2(q_0 + E_f)\omega_k + i\epsilon\right]
+\left[E_i^2 - 2 E_i\omega_k + i\epsilon\right]
+} \bigg)
+\end{align*}
+looking at terms 1 and 3 due to symmetry
+\begin{align*}
+&\lim_{\epsilon \to 0}
+\quad\frac{1}{
+\left[q_0^2 - 2 q_0\omega_k + i\epsilon\right]
+\left[(E_i - E_f)^2 - 2(E_i - E_f)\omega_k + i\epsilon\right]
+\left[E_f^2 + 2 E_f\omega_k\right]
+} \\
++ &\lim_{\epsilon \to 0}\quad \frac{1}{
+\left[(E_f - E_i)^2 - 2(E_f - E_i)\omega_k\right]
+\left[(q_0 + E_f - E_i)^2 - 2(q_0 + E_f - E_i)\omega_k + i\epsilon\right]
+\left[E_i^2 + 2 E_i\omega_k\right]
+} \\
+\end{align*}
+\textbf{I made an error here - I need to fully expand the two first two terms in order to use the sohkotski-plemelj theorem}
+\begin{align*}
+\left[\frac{1}{q_0^2 - 2 q_0\omega_k} - \pi i \delta(q_0^2 - 2 q_0\omega_k) \right]
+\left[\frac{1}{(E_i - E_f)^2 - 2(E_i - E_f)\omega_k} - \pi i \delta((E_i - E_f)^2 - 2(E_i - E_f)\omega_k)\right]
+\left[\frac{1}{E_f^2 + 2 E_f\omega_k}\right] \\
++
+\left[\frac{1}{(E_f - E_i)^2 - 2(E_f - E_i)\omega_k}\right]
+\left[\frac{1}{(q_0 + E_f - E_i)^2 - 2(q_0 + E_f - E_i)\omega_k} - \pi i \delta((q_0 + E_f - E_i)^2 - 2(q_0 + E_f - E_i)\omega_k)\right]\\
+\left[\frac{1}{E_i^2 + 2 E_i\omega_k}\right] \\
+\end{align*}
+we need to use the delta function identity again
+\begin{align*}
+&\delta(a^2 - 2a\sqrt{1+x^2}) = ?\\
+&\pm\frac{1}{2}\sqrt{a^2-4} = x\\
+\end{align*}
+we keep only the positive root for x, again due to the integration region
+\begin{align*}
+&\frac{d (-2a\sqrt{1+x^2})}{dx} = \frac{-2ax}{\sqrt{1+x^2}}\\
+&\delta(a^2 - 2a\sqrt{1+x^2}) =  \frac{\delta(x-\frac{1}{2}\sqrt{a^2-4})\sqrt{1+x^2}}{|-2ax|}\\
+&\delta(a^2 - 2a\sqrt{1+x^2}) =  \frac{\delta(x-\frac{1}{2}\sqrt{a^2-4})}{2\sqrt{a^2-4}}
+\end{align*}
+using this identity for all the delta functions:
+\begin{align*}
+&\left[\frac{1}{q_0^2 - 2 q_0\omega_k} - \pi i (\frac{\delta(k-\frac{1}{2}\sqrt{q_0^2-4})}{2\sqrt{q_0^2-4}}) \right]
+\left[\frac{1}{(E_i - E_f)^2 - 2(E_i - E_f)\omega_k} - \pi i (\frac{\delta(k-\frac{1}{2}\sqrt{(E_i - E_f)^2-4})}{2\sqrt{(E_i - E_f)^2-4}}) \right]
+\left[\frac{1}{E_f^2 + 2 E_f\omega_k}\right]+\\
+&\left[\frac{1}{(E_f - E_i)^2 - 2(E_f - E_i)\omega_k}\right]
+\left[\frac{1}{(q_0 + E_f - E_i)^2 - 2(q_0 + E_f - E_i)\omega_k} - \pi i (\frac{\delta(k-\frac{1}{2}\sqrt{(q_0 + E_f - E_i)^2-4})}{2\sqrt{(q_0 + E_f - E_i)^2-4}}) \right]
+\left[\frac{1}{E_i^2 + 2 E_i\omega_k}\right] \\
+\end{align*}
+I can see that this will result in a nasty expansion that I will leave for later. 
+moving to the second term (which is symmetric by itself)
+\begin{align*}
+&\lim_{\epsilon \to 0}\quad\frac{1}{
+\left[q_0^2  + 2 q_0\omega_k\right]
+\left[(E_i + -q_0  -E_f)^2  -2(E_i + -q_0  -E_f)\omega_k + i\epsilon\right]
+\left[(q_0 + E_f)^2 + 2(q_0 + E_f)\omega_k\right]
+} 
+\end{align*}
+again using the Sohkoskii-Plemelj theorem
+\begin{align*}
+&\lim_{\epsilon \to 0}\quad\left[\frac{1}{q_0^2  + 2 q_0\omega_k}\right]
+\left[PV(\frac{1}{(E_i + -q_0  -E_f)^2  -2(E_i + -q_0  -E_f)\omega_k)} - i\pi\delta((E_i + -q_0  -E_f)^2  -2(E_i + -q_0  -E_f)\omega_k)\right]
+\frac{1}{(q_0 + E_f)^2 + 2(q_0 + E_f)\omega_k}
+\end{align*}
+and last, the fourth term. 
+\begin{align*}
+\lim_{\epsilon \to 0}\quad\frac{1}{
+\left[E_f^2 - 2 E_f\omega_k + i\epsilon\right]
+\left[(q_0 + E_f)^2 - 2(q_0 + E_f)\omega_k + i\epsilon\right]
+\left[E_i^2 - 2 E_i\omega_k + i\epsilon\right]
+}
+\end{align*}
+All of these factors will have a delta function contribution, and will also result in a nasty expansion that I will leave for later. 
