@@ -42,3 +42,15 @@ However, in this case the integral converges, and there is no need to introduce 
 * Check which of these terms appear to have poles where the $\delta$, in the $\frac{1}{x-i\epsilon}=PV\frac{1}{x} + i\pi\delta(x)$, will be relevant.
 * Probably some plots to illustrate the point above would be a good idea.
 
+### Follow up from May 23
+* Split up the integral into the three conserving symmetry terms ($E_f \leftrightarrow E_i, q_0 \rightarrow q_0 + E_f - E_i$).
+* Check if each singularity on the integral comes from different terms, or if all singularities show up for each of them.
+* Plot the denominators of each term to see which will require the Principal Value plus delta Dirac. Keep in mind the relevant kinematic regions, e.g. $4m> Ef > 1.8m$, etc.
+
+### Follow up from June 4
+* Perform the integral for each of the symmetry conserving terms.
+  * Begin wtih the term where only one of the denominators requiring the principal value prescription.
+  * Then try the one with the two PV denominators.
+  * Finally try the term for which all three denominators vanish for some values of the integral
+(Example of numerical integral in mathematica with principal value (epsilon=0))
+* Begin reading chapters 1 and 3 of the dissertation
