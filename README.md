@@ -54,3 +54,10 @@ However, in this case the integral converges, and there is no need to introduce 
   * Finally try the term for which all three denominators vanish for some values of the integral
 (Example of numerical integral in mathematica with principal value (epsilon=0))
 * Begin reading chapters 1 and 3 of the dissertation
+
+### June 18
+NOTE: Can you get samples of the honor thesis proposal?
+* Double check the derivations, we expect the real part of the numerical integral to be equal to the result of the delta diracs.
+
+
+
