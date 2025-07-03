@@ -59,5 +59,8 @@ However, in this case the integral converges, and there is no need to introduce 
 NOTE: Can you get samples of the honor thesis proposal?
 * Double check the derivations, we expect the real part of the numerical integral to be equal to the result of the delta diracs.
 
-
+### July 3
+* Get the Real part of the integral for the case of the other diagram we have not considered, this would amount to replace $q_0$ with $E_f$ in the last propagator.
+* As a bonus, to better understand the spikes in the numerical integral, you can try and plot the lines where the double delta diracs would appear.
+* A few plots to observe the dependence of $E_f$ in the integral would be useful, keep plots as a function of $E_i$, but also choose four or five values of $E_f$.
 
