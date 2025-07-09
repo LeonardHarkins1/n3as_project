@@ -64,3 +64,6 @@ NOTE: Can you get samples of the honor thesis proposal?
 * As a bonus, to better understand the spikes in the numerical integral, you can try and plot the lines where the double delta diracs would appear.
 * A few plots to observe the dependence of $E_f$ in the integral would be useful, keep plots as a function of $E_i$, but also choose four or five values of $E_f$.
 
+### July 9
+* Give a physical interpretation to the singularities you observe around the physical region, with $E_i$ and $E_f$ in between $\sim 1.8$ and 4.
+* Probably this would mean isolating different terms in your final result, so that you observe the different singularities associated with each term.
