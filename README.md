@@ -67,3 +67,16 @@ NOTE: Can you get samples of the honor thesis proposal?
 ### July 9
 * Give a physical interpretation to the singularities you observe around the physical region, with $E_i$ and $E_f$ in between $\sim 1.8$ and 4.
 * Probably this would mean isolating different terms in your final result, so that you observe the different singularities associated with each term.
+
+### July 16
+* Summer school lectures, scattering
+  
+### July 23
+* Identify singularties of the integral with specific propagators diverging in the integrand (cuts in the diagram).
+* Sketch in a $E_i,E_f$ plane, with fixed $q_0$ the location of each of these singularities.
+
+
+Mathematica useful commands:
+Save plots with Legends
+SetDirectory[NotebookDirectory[]]
+Export["plot.pdf", plot]
