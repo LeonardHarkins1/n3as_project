@@ -76,6 +76,12 @@ NOTE: Can you get samples of the honor thesis proposal?
 * Sketch in a $E_i,E_f$ plane, with fixed $q_0$ the location of each of these singularities.
 
 
+### October 30
+* Finish up learning about relativity (up to Chapter 12.2.4 in Griffiths)
+* Begin plotting form factors as a function of $Q^2$, begin with the axial form factor.
+
+
+
 Mathematica useful commands:
 Save plots with Legends
 SetDirectory[NotebookDirectory[]]
