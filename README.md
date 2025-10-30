@@ -79,7 +79,7 @@ NOTE: Can you get samples of the honor thesis proposal?
 ### October 30
 * Finish up learning about relativity (up to Chapter 12.2.4 in Griffiths)
 * Begin plotting form factors as a function of $Q^2$, begin with the axial form factor.
-* Tighter constrains in variable $p_h^2$.
+* Tighter constraints in variable $p_h^2$.
 
 
 
