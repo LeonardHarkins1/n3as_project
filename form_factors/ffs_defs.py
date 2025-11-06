@@ -13,8 +13,17 @@ def z_conformal(Q2, tc):
     Input:
     Q2 : value of -(pf-pi)^2
     tc : value of branch cut in the Q2 complex plane
+    
+    Other vairable: 
+    t0 : optimal conformal map variable, 
+    minimizes |z| within experimental range according to the equation
+    t0 = tc * ( 1 - np.sqrt( 1 + Q2max/tc) )
+    given in paper to be -0.28 GeV^2 for Q2max = 1 GeV
     """
-    return np.sqrt(Q2 - tc)
+    t0 = -0.28
+    return (np.sqrt(tc + Q2) - np.sqrt(tc - t0))/(np.sqrt(tc + Q2) + np.sqrt(tc - t0))
+
+
 
 
 def axial_conf(Q2, tc, a_list):
