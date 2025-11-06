@@ -53,6 +53,6 @@ def axial_dipole(Q2, gA, mA):
     gA : axial charge (F_A(0))
     mA : dipole mass
     """
-    ff = gA*((1+Q2/(mA**2))**-2)
+    ff = -gA*((1+Q2/(mA**2))**-2)
 
     return ff
