@@ -81,6 +81,11 @@ NOTE: Can you get samples of the honor thesis proposal?
 * Begin plotting form factors as a function of $Q^2$, begin with the axial form factor.
 * Tighter constraints in variable $p_h^2$.
 
+### November 21
+* Finish the implementation of F_A, with creating the variable sample only once, instead of once per $Q^2$.
+* Problem 12.36 of Griffiths electrodynamics. Add extra difficulty by comparing results from boosting to the CM frame.
+* Begin looking at the implementation of $F_V$, $A$, $B$, $C$, and $R$.
+
 
 
 Mathematica useful commands:
