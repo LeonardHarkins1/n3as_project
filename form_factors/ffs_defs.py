@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # @Date    : 2025-11-6 8:59:30
@@ -21,7 +22,7 @@ def z_conformal(Q2, tc):
     given in paper to be -0.28 GeV^2 for Q2max = 1 GeV
     """
     t0 = -0.28
-
+    
     return (np.sqrt(tc + Q2) - np.sqrt(tc - t0))/(np.sqrt(tc + Q2) + np.sqrt(tc - t0))
 
 
@@ -42,9 +43,8 @@ def axial_conf(Q2, tc, a_list):
     return ff
 
 
-
-def construct_A_inverse(tc):
-    """constructs inverse matrix that solves for a values when multiplied by b, which depends on base parameters of a1-a4
+def construct_a_list(base_params, gA, tc): 
+    """constructsa list that solves for a values when multiplied by b, which depends on base parameters of a1-a4
     A: Sum rules, identity matrix for a1-a4, F(0) = gA constraint
     """
     #initialize matrix for system of equations
@@ -63,31 +63,20 @@ def construct_A_inverse(tc):
     #F_A(0) = gA constraint
     A[0, :] = z_conformal(0, tc)**k_values
 
+
     # Calculate the inverse of A
     A_inv = np.linalg.inv(A)
-    return A_inv
 
-def construct_a_list(A_inverse, base_params, gA): 
-    """ takes A inverse, uses b to find the full a list from the a1-a4 base parameters
-    """
     #Initialize the b vector for Aa = b
     b = np.zeros(9)
     b[1:5] = base_params
     b[5:] = 0
     b[0] = gA
 
-    return A_inverse @ b
+    return A_inv @ b
 
-def axial_conf_err(Q2, tc, a_list, a_std_dv_list, correlation_matrix, gA):
-    """ calculate axial form factor errors (conformal map model)
-    Input:
-    Q2 : value of -(pf-pi)^2
-    tc : value of branch cut in the Q2 complex plane
-    a_list : list of coefficients of the conformal map expansion
-    a_std_dv_list : list of std deviations for each value of coefficient of conformal map expansion
-    correlation_matrix : correlation matrix for the coefficients
-    """
-    N=10**4
+def generate_samples(a_list, a_std_dv_list, correlation_matrix, N):
+    
     # define covariance matrix from correlation matrix and standard deviations
     D = np.diag(a_std_dv_list)
     covariance_matrix = D @ correlation_matrix @ D
@@ -98,11 +87,23 @@ def axial_conf_err(Q2, tc, a_list, a_std_dv_list, correlation_matrix, gA):
         cov=covariance_matrix,
         size=N
     )
+    return data_points
+
+def axial_conf_err(Q2, tc, data_points):
+    """ calculate axial form factor errors (conformal map model)
+    Input:
+    Q2 : value of -(pf-pi)^2
+    tc : value of branch cut in the Q2 complex plane
+    a_list : list of coefficients of the conformal map expansion
+    a_std_dv_list : list of std deviations for each value of coefficient of conformal map expansion
+    correlation_matrix : correlation matrix for the coefficients
+    """
     
-    A_inverse = construct_A_inverse(tc)
+    #need to only make samples once...
+    #this should have the 1000 samples as an input rather than resampling every time for every Q^2
     
     # Apply the function to all 10,000 sampled data points
-    ff_list = [axial_conf(Q2, tc, construct_a_list(A_inverse, dat, gA)) for dat in data_points]
+    ff_list = [axial_conf(Q2, tc, dat) for dat in data_points]
     
     return np.std(ff_list)
 
