@@ -86,6 +86,9 @@ NOTE: Can you get samples of the honor thesis proposal?
 * Problem 12.36 of Griffiths electrodynamics. Add extra difficulty by comparing results from boosting to the CM frame.
 * Begin looking at the implementation of $F_V$, $A$, $B$, $C$, and $R$.
 
+### January 23
+* Implement the used parameterization of the $F_V$ vector form factor described in https://inspirehep.net/literature/1427020
+* Begin implementing the expressions of A, B and C, which are given in terms of form factors.
 
 
 Mathematica useful commands:
