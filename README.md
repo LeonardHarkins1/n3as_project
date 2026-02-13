@@ -90,6 +90,10 @@ NOTE: Can you get samples of the honor thesis proposal?
 * Implement the used parameterization of the $F_V$ vector form factor described in https://inspirehep.net/literature/1427020
 * Begin implementing the expressions of A, B and C, which are given in terms of form factors.
 
+### February 13
+* Finish checking the implementation of Figure 3.
+* Begin reading the Llewellyn-Smith paper.
+
 
 Mathematica useful commands:
 Save plots with Legends
