@@ -94,6 +94,11 @@ NOTE: Can you get samples of the honor thesis proposal?
 * Finish checking the implementation of Figure 3.
 * Begin reading the Llewellyn-Smith paper.
 
+### February 20
+* Begin implementing the calculation of the dN/dQ
+  * Calculate the integral of the cross-section with scipy functions
+  * Use splines to interpolate over values of R
+  * Compute the final integral using the EC files from the supplemental material
 
 Mathematica useful commands:
 Save plots with Legends
