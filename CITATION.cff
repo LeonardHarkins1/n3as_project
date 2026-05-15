@@ -1,0 +1,11 @@
+cff-version: 1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Harkins"
+  given-names: "Leonard"
+  orcid: "https://orcid.org/0009-0009-0481-2421"
+title: "n3as project software"
+version: 2.0.4
+doi: 10.5281/zenodo.1234
+date-released: 2026-5-15
+url: "https://github.com/LeonardHarkins1/n3as_project"
